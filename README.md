@@ -48,5 +48,5 @@ Once you have compiled your project into an uber jar, you can execute it with th
 ```sh
 java -jar client/target/client-jar-with-dependencies.jar
 
-♕ 240 Chess Client: chess.ChessPiece@7852e922
+♕ 240 Chess Client: shared.src.chess.ChessPiece@7852e922
 ```

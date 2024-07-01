@@ -11,7 +11,7 @@ import java.util.Collection;
 public class ChessPiece {
 
     private ChessGame.TeamColor pieceColor;
-    private ChessPiece.PieceType type
+    private ChessPiece.PieceType type;
 
     public ChessPiece(ChessGame.TeamColor pieceColor, ChessPiece.PieceType type) {
         this.pieceColor = pieceColor;
@@ -22,6 +22,7 @@ public class ChessPiece {
      * The various different chess piece options
      */
     public enum PieceType {
+
         KING {
 
         },
@@ -52,7 +53,6 @@ public class ChessPiece {
      */
     public ChessGame.TeamColor getTeamColor() {
         return pieceColor;
-        //throw new RuntimeException("Not implemented");
     }
 
     /**
@@ -60,7 +60,6 @@ public class ChessPiece {
      */
     public PieceType getPieceType() {
         return type;
-        //throw new RuntimeException("Not implemented");
     }
 
     /**
@@ -72,5 +71,37 @@ public class ChessPiece {
      */
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
         throw new RuntimeException("Not implemented");
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+        String symbol = " ";
+        switch (type) {
+            case KING:
+                symbol = "K";
+                break;
+            case QUEEN:
+                symbol = "Q";
+                break;
+            case BISHOP:
+                symbol = "B";
+                break;
+            case KNIGHT:
+                symbol = "N";
+                break;
+            case ROOK:
+                symbol = "R";
+                break;
+            case PAWN:
+                symbol = "P";
+                break;
+        }
+        //String str = (condition) ? expressionTrue : expressionFalse;
+        return (pieceColor == ChessGame.TeamColor.WHITE) ? symbol : symbol.toLowerCase();
+
     }
 }

@@ -28,7 +28,6 @@ public class ChessPosition {
          * that corresponds to where the in the array it actually should be.
           */
         return ((row-8)*(-1));
-        //throw new RuntimeException("Not implemented");
     }
 
     /**
@@ -41,6 +40,5 @@ public class ChessPosition {
          * so the input is returned with one subtracted off to give the array location.
          */
         return col-1;
-        //throw new RuntimeException("Not implemented");
     }
 }
